@@ -6,7 +6,7 @@
           <!--Next one starts a single macro spot. Indices start at 0 not 1. In this example i've deleted all but 1 motion overlay example. 
           Keep the macros in order and never use the same number index twice. You can rename the macro in here as well-->
         <Macro index="1" name="Four Grid Alternate" description="">
-          <!--Next four key indices turn off the USKs. Starting with 0 as 1 and going forward-->
+          <!--Next four key indices turn off the USKs. Starting with 0 not 1. As in 0 is 1, 1 is 2...-->
             <Op id="KeyOnAir" mixEffectBlockIndex="0" keyIndex="0" onAir="False"/>
             <Op id="KeyOnAir" mixEffectBlockIndex="0" keyIndex="1" onAir="False"/>
             <Op id="KeyOnAir" mixEffectBlockIndex="0" keyIndex="2" onAir="False"/>
@@ -16,14 +16,14 @@
             <Op id="DownstreamKeyOnAir" keyIndex="1" onAir="False"/>
           <!--Next determines the type of key. Luma, Chroma, Pattern, DVE-->
             <Op id="KeyType" mixEffectBlockIndex="0" keyIndex="1" type="Luma"/>
-          <!--Next five determine properties of the HyperDeck playback-->
+          <!--Next five determine properties of the HyperDeck playback. Index 1 equaly Hyperdeck 2, because it all starts with zero, not 1-->
             <Op id="HyperDeckSetSingleClip" hyperDeckIndex="1" singleClipEnabled="False"/>
             <Op id="HyperDeckSetLoop" hyperDeckIndex="1" loopEnabled="True"/>
             <Op id="HyperDeckSetSourceClipIndex" hyperDeckIndex="1" clipIndex="14"/>
             <Op id="HyperDeckSetSpeed" hyperDeckIndex="1" speedPercent="1"/>
             <Op id="HyperDeckPlay" hyperDeckIndex="1"/>
           <!--Next four determine properties of the Luma Key, can be for any type of key. For luma used in animated overlays this sets the 
-          Hyperdeck to premultiplied. The rest isn't important-->
+          Hyperdeck to premultiplied. The rest isn't important for these overlays-->
             <Op id="LumaKeyPreMultiply" mixEffectBlockIndex="0" keyIndex="1" preMultiply="True"/>
             <Op id="LumaKeyClip" mixEffectBlockIndex="0" keyIndex="1" clip="0.5"/>
             <Op id="LumaKeyGain" mixEffectBlockIndex="0" keyIndex="1" gain="0.699997"/>
